@@ -45,11 +45,10 @@ export class UrlReaderProcessor implements CatalogProcessor {
     emit: CatalogProcessorEmit,
   ): Promise<boolean> {
     if (deprecatedTypes.includes(location.type)) {
-      // TODO(Rugvip): Let's not enable this warning yet, as we want to move over the example YAMLs
-      //               in this repo to use the 'url' type first.
-      // this.options.logger.warn(
-      //   `Using deprecated location type '${location.type}' for '${location.target}', use 'url' instead`,
-      // );
+      // TODO(Rugvip): Remove this warning a month or two into 2021, and remove support for the deprecated types.
+      this.options.logger.warn(
+        `Location '${location.target}' uses deprecated location type '${location.type}', use 'url' instead`,
+      );
     } else if (location.type !== 'url') {
       return false;
     }
