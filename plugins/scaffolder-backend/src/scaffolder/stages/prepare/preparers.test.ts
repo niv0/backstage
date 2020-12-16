@@ -61,7 +61,7 @@ describe('Preparers', () => {
 
     expect(() => preparers.get(mockTemplate)).toThrow(
       expect.objectContaining({
-        message: 'No preparer registered for type: "file"',
+        message: "No preparer registered for type: 'file'",
       }),
     );
   });

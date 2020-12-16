@@ -68,7 +68,7 @@ describe('Publishers', () => {
 
     expect(() => publishers.get(mockTemplate)).toThrow(
       expect.objectContaining({
-        message: 'No publisher registered for type: "github"',
+        message: "No publisher registered for type: 'github'",
       }),
     );
   });
