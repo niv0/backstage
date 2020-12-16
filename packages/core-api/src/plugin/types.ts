@@ -76,8 +76,8 @@ export type AnyRoutes = { [name: string]: RouteRef<any> };
 export type AnyExternalRoutes = { [name: string]: ExternalRouteRef };
 
 export type BackstagePlugin<
-  Routes extends AnyRoutes,
-  ExternalRoutes extends AnyExternalRoutes
+  Routes extends AnyRoutes = any,
+  ExternalRoutes extends AnyExternalRoutes = any
 > = {
   getId(): string;
   output(): PluginOutput[];
