@@ -1,5 +1,11 @@
 # @backstage/core-api
 
+## 0.2.6
+
+### Patch Changes
+
+- 7dd2ef7d1: GitHub Auth Api uses provider.id to build storage key name.
+
 ## 0.2.5
 
 ### Patch Changes
